@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Peris Mwaura — Portfolio</title>
+    <meta name="description" content="Peris Mwaura — Electrical & Telecommunication Engineering student. Projects, skills and contact." />
+    <style>
+        :root{
+            --teal:#008080;
+            --bg:#f4f7f8;
+            --card:#ffffff;
+            --muted:#6b7280;
+            --radius:10px;
+            --max-width:1000px;
+            font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            background:var(--bg);
+            color:#111827;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+        .site{
+            max-width:var(--max-width);
+            margin:28px auto;
+            padding:18px;
+        }
+        header{
+            background:linear-gradient(90deg,var(--teal),#0a8a86);
+            color:#fff;
+            border-radius:var(--radius);
+            padding:20px;
+            display:flex;
+            gap:16px;
+            align-items:center;
+        }
+        .avatar{
+            width:84px;height:84px;border-radius:12px;background:rgba(255,255,255,0.12);
+            display:flex;align-items:center;justify-content:center;font-weight:700;
+            font-size:28px;color:#fff;flex-shrink:0;
+        }
+        header h1{margin:0;font-size:20px}
+        header p{margin:0;opacity:0.95;color:rgba(255,255,255,0.95)}
+        main{
+            display:grid;
+            grid-template-columns:1fr;
+            gap:18px;
+            margin-top:18px;
+        }
+        @media(min-width:820px){
+            main{grid-template-columns:1fr 320px;}
+        }
+        .card{
+            background:var(--card);
+            border-radius:var(--radius);
+            padding:18px;
+            box-shadow:0 6px 18px rgba(16,24,40,0.06);
+        }
+        h2{color:var(--teal);margin-top:0}
+        ul{margin:8px 0 0 20px;padding:0}
+        .projects li{margin-bottom:8px}
+        .contact p{margin:6px 0;color:var(--muted)}
+        footer{
+            text-align:center;
+            color:#fff;
+            background:var(--teal);
+            margin-top:20px;
+            padding:12px;
+            border-radius:8px;
+            font-size:14px;
+        }
+        /* simple form */
+        form label{display:block;font-size:13px;margin-top:10px;color:var(--muted)}
+        input[type="text"], input[type="email"], textarea{
+            width:100%;
+            padding:10px;
+            margin-top:6px;
+            border:1px solid #e6e9ee;
+            border-radius:8px;
+            font-size:14px;
+        }
+        button{
+            margin-top:12px;
+            background:var(--teal);
+            color:#fff;
+            border:0;
+            padding:10px 14px;
+            border-radius:8px;
+            cursor:pointer;
+            font-weight:600;
+        }
+        .muted{color:var(--muted);font-size:14px}
+    </style>
+</head>
+<body>
+    <div class="site">
+        <header role="banner" aria-label="Site header">
+            <div class="avatar" aria-hidden="true">PM</div>
+            <div>
+                <h1>Peris Mwaura</h1>
+                <p>Electrical & Telecommunication Engineering Student — Multimedia University of Kenya</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="card" aria-labelledby="about-title">
+                <h2 id="about-title">About Me</h2>
+                <p class="muted">
+                    I am Peris Mwaura, a student passionate about electronics, communication systems and software.
+                    I enjoy building projects that combine hardware and embedded software.
+                </p>
+
+                <h3 style="color:var(--teal);margin-top:14px">Skills</h3>
+                <ul>
+                    <li>Electrical circuits & electronics design</li>
+                    <li>Telecommunication systems & RF basics</li>
+                    <li>Networking (LAN, TCP/IP)</li>
+                    <li>Programming: C, Python</li>
+                </ul>
+
+                <h3 style="color:var(--teal);margin-top:14px">Projects</h3>
+                <ul class="projects">
+                    <li>IoT Weather Monitoring System (ESP32 + MQTT)</li>
+                    <li>Basic RF Communication Prototype</li>
+                    <li>Signal Processing Mini-Project (MATLAB & Python)</li>
+                </ul>
+            </section>
+
+            <aside>
+                <section class="card contact" aria-labelledby="contact-title">
+                    <h2 id="contact-title">Contact</h2>
+                    <p class="muted">Email: <a href="mailto:peris@example.com">peris@example.com</a></p>
+                    <p class="muted">Phone: +2547XX XXX XXX</p>
+
+                    <form id="contactForm" method="GET" action="mailto:peris@example.com" enctype="text/plain" aria-label="Contact form">
+                        <label for="name">Name</label>
+                        <input id="name" name="Name" type="text" placeholder="Your name" required>
+
+                        <label for="email">Email</label>
+                        <input id="email" name="Email" type="email" placeholder="you@example.com" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" rows="4" placeholder="Brief message" required></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </aside>
+        </main>
+
+        <footer role="contentinfo">© 2025 Peris Mwaura</footer>
+    </div>
+</body>
+</html>
